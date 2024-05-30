@@ -3,8 +3,8 @@ import "./style.scss";
 // Ajout : Définition des types de champs de formulaire
 export const FIELD_TYPES = {
   INPUT_TEXT: "text",
-  TEXTAREA: "text-area",
-  InputEmail: "email",
+  TEXT_AREA: "text-area",
+  INPUT_EMAIL: "email",
 };
 
 // Définition du composant Field qui rend différents types de champs de formulaire
@@ -35,7 +35,6 @@ const Field = ({ type = FIELD_TYPES.INPUT_TEXT, label, name, placeholder }) => {
       );
       break;
     default:
-      // Par défaut, un champ d'entrée de type texte est rendu
       component = (
         <input
           type="text"
